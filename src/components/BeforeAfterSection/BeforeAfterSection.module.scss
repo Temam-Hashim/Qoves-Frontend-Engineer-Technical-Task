@@ -308,7 +308,21 @@
   }
 
   .connector {
-    min-height: 220px;
+    display: none;
+  }
+
+  .heroFrame {
+    display: none;
+  }
+
+  .portraitCard {
+    border: 1px solid rgba(199, 217, 225, 0.95);
+    box-shadow: var(--card-shadow);
+    padding: 12px;
+  }
+
+  .portraitImage {
+    border-radius: 14px;
   }
 
   .steps {
