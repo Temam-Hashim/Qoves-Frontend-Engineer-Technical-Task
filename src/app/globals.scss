@@ -53,6 +53,13 @@
   --card-border: rgba(17, 20, 24, 0.08);
   --card-shadow: 0 10px 30px rgba(17, 20, 24, 0.06);
   --page-guide-inset: 160px;
+  --page-guide-visible: 1;
+}
+
+@media (max-width: 1320px) {
+  :root {
+    --page-guide-visible: 0;
+  }
 }
 
 *,

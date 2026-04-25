@@ -14,8 +14,16 @@
   left: -88px;
   pointer-events: none;
   background:
-    linear-gradient(rgba(17, 20, 24, 0.05), rgba(17, 20, 24, 0.05)) left 210px top / 1px 100% no-repeat,
-    linear-gradient(rgba(17, 20, 24, 0.05), rgba(17, 20, 24, 0.05)) right 210px top / 1px 100% no-repeat;
+    linear-gradient(
+        rgba(17, 20, 24, calc(0.05 * var(--page-guide-visible))),
+        rgba(17, 20, 24, calc(0.05 * var(--page-guide-visible)))
+      )
+      left 210px top / 1px 100% no-repeat,
+    linear-gradient(
+        rgba(17, 20, 24, calc(0.05 * var(--page-guide-visible))),
+        rgba(17, 20, 24, calc(0.05 * var(--page-guide-visible)))
+      )
+      right 210px top / 1px 100% no-repeat;
 }
 
 .content {
