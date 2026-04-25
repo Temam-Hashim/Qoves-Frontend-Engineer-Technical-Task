@@ -78,19 +78,18 @@ export function CompleteFacialAnalysisSection() {
               unoptimized
             />
           </div>
-
-          <Image
-            src="/images/analysis-portrait-cutout.png"
-            alt=""
-            width={732}
-            height={730}
-            sizes="(min-width: 981px) 520px, 0px"
-            className={styles.desktopPortrait}
-            priority
-            quality={100}
-            unoptimized
-          />
         </div>
+        <Image
+          src="/images/analysis-portrait-cutout.png"
+          alt=""
+          width={732}
+          height={730}
+          sizes="(min-width: 981px) 520px, 0px"
+          className={styles.desktopPortrait}
+          priority
+          quality={100}
+          unoptimized
+        />
         <Image
           src="/images/analysis-medium-reference.png"
           alt=""

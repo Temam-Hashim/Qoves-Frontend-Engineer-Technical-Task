@@ -442,6 +442,60 @@
   text-wrap: balance;
 }
 
+@media (max-width: 1320px) {
+  /* Hide global guide lines on medium too */
+  .inner::before,
+  .section::before {
+    background: none;
+  }
+
+  .upperText {
+    margin-left: 0;
+    max-width: 560px;
+  }
+
+  .topCards {
+    margin-left: 0;
+    min-width: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .topCard {
+    min-width: 0;
+    width: 100%;
+    padding: 22px 20px 20px;
+  }
+
+  .lowerGrid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding-top: 92px;
+    padding-bottom: 56px;
+  }
+
+  .centerCopy {
+    order: -1;
+    margin-left: 0;
+    margin-top: 0;
+    max-width: 680px;
+  }
+
+  .lowerGrid > .sideCard:first-child,
+  .lowerGrid > .sideCard:last-child {
+    transform: none;
+    min-width: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .sideCard {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 980px) {
   .inner::before {
     background: none;

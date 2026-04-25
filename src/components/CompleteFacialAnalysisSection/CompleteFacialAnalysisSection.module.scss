@@ -179,7 +179,32 @@
   transform: translateX(-50%);
   width: min(700px, 66vw);
   height: auto;
-  z-index: 3;
+  z-index: 4;
+}
+
+/* Medium desktop: keep face visible below title */
+@media (min-width: 981px) and (max-width: 1200px) {
+  .hero {
+    aspect-ratio: 1024 / 560;
+  }
+
+  .desktopPortrait {
+    bottom: -86px;
+    width: min(640px, 74vw);
+  }
+
+  .titleBlock {
+    top: 18px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .subtitle {
+    margin-top: 12px;
+    max-width: 460px;
+  }
 }
 
 
@@ -363,6 +388,10 @@
   }
 
   .desktopScene {
+    display: none;
+  }
+
+  .desktopPortrait {
     display: none;
   }
 

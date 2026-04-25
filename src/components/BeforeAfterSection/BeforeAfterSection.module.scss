@@ -293,6 +293,30 @@
   color: rgba(255, 255, 255, 0.92);
 }
 
+@media (max-width: 1180px) {
+  /*
+    Medium screens keep the desktop frame/connector, but the layout compresses
+    which can make the frame sit closer to the photos. Add extra "white gutter"
+    so the frame never visually overlaps the image.
+  */
+  .heroFrame {
+    inset: 10px;
+  }
+
+  .portraitCard {
+    padding: 22px;
+  }
+
+  .hero > .portraitCard:last-child {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .portraitImage {
+    border-radius: 12px;
+  }
+}
+
 @media (max-width: 980px) {
   .section {
     padding: 52px 0 40px;
