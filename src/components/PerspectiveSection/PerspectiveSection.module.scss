@@ -1,0 +1,642 @@
+.section {
+  position: relative;
+  width: 100%;
+  padding: 0 0 112px;
+  background: #fff;
+  overflow-x: clip;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: -86px;
+  right: 0;
+  bottom: -86px;
+  left: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(17, 20, 24, 0.05), rgba(17, 20, 24, 0.05)) left var(--page-guide-inset) top / 1px 100% no-repeat,
+    linear-gradient(rgba(17, 20, 24, 0.05), rgba(17, 20, 24, 0.05)) right var(--page-guide-inset) top / 1px 100% no-repeat;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(17, 20, 24, 0.05), rgba(17, 20, 24, 0.05)) left 0 top 0 / 100% 1px no-repeat,
+    linear-gradient(rgba(17, 20, 24, 0.05), rgba(17, 20, 24, 0.05)) left 0 bottom 0 / 100% 1px no-repeat;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  min-height: 1180px;
+  overflow: hidden;
+  background: #6f675f;
+}
+
+.inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)) left var(--page-guide-inset) top / 1px 100% no-repeat,
+    linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)) right var(--page-guide-inset) top / 1px 100% no-repeat;
+}
+
+.backgroundVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+}
+
+.globalShade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(32, 23, 13, 0.18) 0%, rgba(32, 23, 13, 0.2) 100%),
+    radial-gradient(circle at 14% 38%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 28%);
+}
+
+.eyebrowWrap {
+  position: absolute;
+  top: 30px;
+  left: 220px;
+  z-index: 3;
+}
+
+.eyebrow {
+  margin-left: -20px;
+  font-family: "Zagma Mono", monospace;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.upperPanel,
+.lowerPanel {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.upperPanel {
+  min-height: 100svh;
+}
+
+.lowerPanel {
+  min-height: 860px;
+}
+
+.lowerPanel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.22);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.upperShade,
+.lowerShade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.upperShade {
+  background:
+    linear-gradient(180deg, rgba(26, 22, 16, 0.08) 0%, rgba(26, 22, 16, 0.12) 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 24%, rgba(255, 255, 255, 0) 76%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.lowerShade {
+  background:
+    linear-gradient(180deg, rgba(24, 18, 11, 0.18) 0%, rgba(24, 18, 11, 0.24) 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 18%, rgba(255, 255, 255, 0) 82%, rgba(255, 255, 255, 0.08) 100%);
+}
+
+.lowerBlur {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+
+.upperGrid,
+.lowerGrid {
+  position: relative;
+  z-index: 2;
+  width: min(1080px, calc(100% - 128px));
+  margin: 0 auto;
+}
+
+.upperGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100svh;
+  padding-top: 108px;
+  padding-bottom: 34px;
+  align-content: end;
+}
+
+.upperText {
+  position: relative;
+  isolation: isolate;
+  max-width: 490px;
+  margin-left: -120px;
+  top: 0;
+  color: rgba(255, 255, 255, 0.94);
+  padding: 0;
+  // background: rgba(248, 245, 245, 0.09);
+  // backdrop-filter: blur(18px);
+  // border-radius: 12px;
+}
+
+.upperText::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -18px;
+  width: 552px;
+  height: 264px;
+  border-radius: 20px;
+  // background:
+  //   radial-gradient(circle at 16% 42%, rgba(215, 226, 214, 0.18) 0%, rgba(215, 226, 214, 0.08) 22%, rgba(215, 226, 214, 0) 48%),
+  //   linear-gradient(180deg, rgba(112, 105, 99, 0.42) 0%, rgba(112, 105, 99, 0.28) 52%, rgba(112, 105, 99, 0.1) 100%);
+  // backdrop-filter: blur(20px);
+  // mask-image: radial-gradient(circle at 42% 46%, black 0%, black 72%, transparent 100%);
+  // box-shadow: 0 0 38px rgba(112, 105, 99, 0.16);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.upperTitle {
+  margin: 0;
+  font-size: 38px;
+  line-height: 1.06;
+  letter-spacing: -0.024em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.upperTitleMuted {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.upperDescription {
+  margin: 12px 0 0;
+  max-width: 360px;
+  font-family: "PP Neue Montreal", system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.55;
+  letter-spacing: 0.005em;
+  text-wrap: balance;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.topCards {
+  position: relative;
+  isolation: isolate;
+  margin-top: 54px;
+  margin-left: -120px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  --topCardsGap: 28px;
+  min-width: 100%;
+}
+
+.topCards::before {
+  content: "";
+  position: absolute;
+  left: -100vw;
+  right: -100vw;
+  top: -14px;
+  height: 1px;
+  background: rgba(249, 248, 248, 0.22);
+  pointer-events: none;
+}
+
+.topCards::after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  bottom: -14px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.72;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16))
+      left calc(((100% - (2 * var(--topCardsGap))) / 3) + (var(--topCardsGap) / 2)) top / 1px 100% no-repeat,
+    linear-gradient(rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16))
+      left calc((2 * ((100% - (2 * var(--topCardsGap))) / 3)) + (1.5 * var(--topCardsGap))) top / 1px 100% no-repeat;
+}
+
+.topCard {
+  position: relative;
+  overflow: hidden;
+  min-height: 176px;
+  min-width: 360px;
+  padding: 40px 40px ;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  // background: #8E8D8A;
+  background:transparent;
+  backdrop-filter: blur(22px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.topCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(14px);
+  pointer-events: none;
+}
+
+.topCardThumb {
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  margin-bottom: 26px;
+}
+
+.topCardImage {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 7px;
+}
+
+.topCardTitle {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.16;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.topCardDescription {
+  position: relative;
+  z-index: 1;
+  margin: 9px 0 0;
+  font-size: 11px;
+  line-height: 1.38;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.lowerGrid {
+  display: grid;
+  grid-template-columns: 380px minmax(320px, 1fr) 380px;
+  align-items: center;
+  gap: 36px;
+  padding-top: 164px;
+  padding-bottom: 476px;
+}
+
+.sideCard {
+  position: relative;
+  overflow: hidden;
+  min-height: 428px;
+  padding: 34px 30px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(30px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 18px 40px rgba(0, 0, 0, 0.14);
+  display: flex;
+  flex-direction: column;
+}
+
+.sideCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(
+    circle at 18% 12%,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0) 46%
+  );
+}
+
+.lowerGrid > .sideCard:first-child {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-160px);
+  min-width: 0;
+  margin-right: 0;
+  min-width: 460px;
+  margin-left: -120px;
+}
+
+.lowerGrid > .sideCard:last-child {
+  background: rgba(127, 125, 125, 0.42);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(360px);
+  margin-top: 0;
+  min-width: 460px;
+  margin-left: -20px;
+}
+
+.lowerGrid > .sideCard:last-child::before {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 46%),
+    radial-gradient(circle at 12% 10%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 44%);
+  opacity: 0.9;
+}
+
+.sideCardTitle {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.sideList {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  padding-top: 22px;
+  display: grid;
+  gap: 14px;
+}
+
+.sideListItem {
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.16);
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.lowerGrid > .sideCard:last-child .sideListItem {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.centerCopy {
+  text-align: center;
+  align-self: center;
+  transform: none;
+  max-width: 820px;
+  margin: 0 auto;
+  margin-left: -30px;
+  margin-top:40px;
+}
+
+.centerTitle {
+  margin: 0;
+  font-size: 66px;
+  line-height: 0.96;
+  letter-spacing: -0.032em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.96);
+  white-space: nowrap;
+}
+
+.centerTitleAccent {
+  display: block;
+  margin-top: -6px;
+  color: rgba(255, 255, 255, 0.48);
+  white-space: nowrap;
+}
+
+.centerDescription {
+  max-width: 460px;
+  margin: 14px auto 0;
+  font-size: 12px;
+  line-height: 1.52;
+  color: rgba(255, 255, 255, 0.66);
+  text-wrap: balance;
+}
+
+@media (max-width: 980px) {
+  .inner::before {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)) left 28px top / 1px 100% no-repeat,
+      linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)) right 28px top / 1px 100% no-repeat;
+  }
+
+  .section::before {
+    top: -86px;
+    right: 0;
+    bottom: -86px;
+    left: 0;
+    background:
+      linear-gradient(rgba(17, 20, 24, 0.05), rgba(17, 20, 24, 0.05)) left 28px top / 1px 100% no-repeat,
+      linear-gradient(rgba(17, 20, 24, 0.05), rgba(17, 20, 24, 0.05)) right 28px top / 1px 100% no-repeat;
+  }
+
+  .eyebrowWrap {
+    left: 52px;
+  }
+
+  .upperGrid,
+  .lowerGrid {
+    width: calc(100% - 56px);
+  }
+
+  .upperPanel {
+    min-height: 820px;
+  }
+
+  .upperGrid {
+    min-height: 820px;
+    padding-top: 118px;
+  }
+
+  .upperText::before {
+    top: -10px;
+    left: -10px;
+    width: 320px;
+    height: 144px;
+  }
+
+  .topCards::after {
+    opacity: 0;
+  }
+
+  .topCards {
+    grid-template-columns: 1fr;
+  }
+
+  .topCard {
+    min-height: 0;
+    padding-top: 14px;
+  }
+
+  .lowerPanel {
+    min-height: 980px;
+  }
+
+  .lowerGrid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding-top: 92px;
+    padding-bottom: 56px;
+  }
+
+  .centerCopy {
+    order: -1;
+    transform: none;
+  }
+
+  .sideList {
+    margin-top: 72px;
+  }
+
+  .lowerGrid > .sideCard:first-child,
+  .lowerGrid > .sideCard:last-child {
+    transform: none;
+  }
+
+  .centerTitle {
+    font-size: 48px;
+  }
+
+  .centerDescription {
+    max-width: 460px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .inner::before {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)) left 24px top / 1px 100% no-repeat,
+      linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)) right 24px top / 1px 100% no-repeat;
+  }
+
+  .section {
+    padding-bottom: 80px;
+  }
+
+  .inner {
+    min-height: 1260px;
+  }
+
+  .backgroundVideo {
+    object-position: center 18%;
+  }
+
+  .eyebrowWrap {
+    left: 24px;
+    top: 10px;
+  }
+
+  .upperGrid,
+  .lowerGrid {
+    width: calc(100% - 24px);
+  }
+
+  .upperPanel {
+    min-height: 680px;
+  }
+
+  .upperGrid {
+    min-height: 680px;
+    padding-top: 104px;
+  }
+
+  .upperText::before {
+    top: -8px;
+    left: -8px;
+    width: 286px;
+    height: 134px;
+  }
+
+  .topCards::after {
+    opacity: 0;
+  }
+
+  .upperText {
+    max-width: 280px;
+  }
+
+  .upperTitle {
+    font-size: 22px;
+  }
+
+  .upperDescription {
+    font-size: 10px;
+  }
+
+  .topCard {
+    padding: 14px 12px 12px;
+  }
+
+  .topCardTitle {
+    font-size: 16px;
+  }
+
+  .topCardDescription {
+    font-size: 11px;
+  }
+
+  .lowerPanel {
+    min-height: 820px;
+  }
+
+  .lowerGrid {
+    gap: 20px;
+    padding-top: 72px;
+    padding-bottom: 36px;
+  }
+
+  .sideCard {
+    min-height: 0;
+    padding: 18px 14px 14px;
+  }
+
+  .sideCardTitle,
+  .centerTitle {
+    font-size: 32px;
+  }
+
+  .sideCardTitle {
+    font-size: 22px;
+  }
+
+  .sideList {
+    margin-top: 54px;
+  }
+
+  .centerDescription {
+    max-width: 300px;
+    font-size: 11px;
+  }
+}

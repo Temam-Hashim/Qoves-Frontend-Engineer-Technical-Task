@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("/fonts/pp-neue-montreal/PPNeueMontreal-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("/fonts/pp-neue-montreal/PPNeueMontreal-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("/fonts/pp-neue-montreal/PPNeueMontreal-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("/fonts/pp-neue-montreal/PPNeueMontreal-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("/fonts/pp-neue-montreal/PPNeueMontreal-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zagma Mono";
+  src: url("/fonts/zagma-mono/F37ZagmaMonoTrial-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --page-bg: #ffffff;
+  --text: #111418;
+  --muted: rgba(17, 20, 24, 0.58);
+  --card-border: rgba(17, 20, 24, 0.08);
+  --card-shadow: 0 10px 30px rgba(17, 20, 24, 0.06);
+  --page-guide-inset: 160px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: "PP Neue Montreal", system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  width: 100%;
+  overflow-x: clip;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
